@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1650625882.jpg"
+      type="image/x-icon">
    <link rel="stylesheet" href="style/style.css">
    <title>Plastic-Card</title>
 </head>
+
 <body>
-   <h1>Hello World!</h1>
+   <div class="container">
+      <div class="plastic-card">
+         <div class="header-card">
+            <img class="img-document"
+               src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
+               alt="img">
+
+            <img class="img-visa"
+               src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/visa.png"
+               alt="Visa">
+         </div>
+
+         <div class="cardNumber-focus">
+            <label for="cardNumber" class="card-item">
+            </label>
+         </div>
+
+         <div class="card-item__content">
+            <label for="cardName" class="card-content__left">
+               <p class="card-item__holder">Card Holder</p>
+               <span class="card-item__name">Full   Name</span>
+            </label>
+
+            <label for="cardMonth" class="card-content__right">
+               <p class="card-item__dateTitle">Expires</p>
+               <span class="card-item__dateItem">MM/YY</span>
+            </label>
+         </div>
+      </div>
+
+
+      <!-- INPUT-FORM -->
+      <div class="card-input__parent">
+
+         <div class="card-form__inner">
+            <div class="card-input">
+               <label class="pos-right" for="cardNumber">
+                  Card Number
+               </label>
+               <input class="card-input__input width active" type="number" id="cardNumber" data-ref="cardNumber" autocomplete="off">
+            </div>
+
+
+            <div class="card-input">
+               <label class="pos-right" for="cardName" class="card-input__label">Card Holders</label>
+               <input class="card-input__input width" type="text" id="cardName" data-ref="cardNumber" autocomplete="off">
+            </div>
+
+
+
+
+            <div class="card-form__row">
+
+               <div class="card-form__col">
+                     <label for="cardMonth" class="card-input__label label-left">Expiration Date</label> <br>
+
+                     <select id="cardMonth" data-ref="cardDate" class="card-input__input -select">
+                        <option value disabled="disabled" selected="selected">Month</option>
+                     </select>
+                  </div>
+
+                  <select id="cardYear" data-ref="cardDate" class="card-input__input -select">
+                     <option value disabled="disabled" selected="selected">Year</option>
+                  </select>
+
+                  <div class="card-form__col cvv">
+                     <div class="card-input">
+                        <label for="cardCvv" class="card-input__label labelCvv">
+                           CVV
+                        </label> <br>
+                        <input type="text" class="card-input__input right-input" id="cardCvv" maxlength="4">
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <button class="btn bottom-center">Submit</button>
+         </div>
+
+      </div>
 
    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+
 * {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*:focus {
+  outline: none;
 }
 
 body {
-   background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ddeefcff;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: 0.8s;
+}
+
+/* plastic-card */
+.plastic-card {
+  width: 430px;
+  height: 270px;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+  background: url("https://fikiwiki.com/uploads/posts/2022-02/1645052334_2-fikiwiki-com-p-kartinki-na-zadnii-fon-2.png")
+    no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 15px;
+  z-index: 300;
+}
+.plastic-card .header-card img.img-document {
+  width: 60px;
+  height: 48px;
+}
+.plastic-card .header-card img.img-visa {
+  width: 85px;
+  height: 45px;
+}
+
+.plastic-card .header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.plastic-card .cardNumber-focus {
+  width: 380px;
+  height: 48px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 25px;
+  border-radius: 6px;
+  margin-bottom: 38px;
+  cursor: pointer;
+}
+
+.cardNumber-focus.active {
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+.plastic-card .card-item {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  word-spacing: 30px;
+}
+
+.card-item__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-end;
+  padding: 0 20px;
+}
+
+.plastic-card .card-content__left {
+  width: 270px;
+  height: 50px;
+  padding: 3px 0 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.plastic-card .card-content__left.active {
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+.plastic-card .card-content__right {
+  width: 100px;
+  height: 50px;
+  padding: 3px 0 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.plastic-card .card-content__right.active {
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+.plastic-card .card-content__left .card-item__holder {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #ccc;
+}
+.plastic-card .card-content__left .card-item__name {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* right */
+.plastic-card .card-content__right .card-item__dateTitle {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #ccc;
+}
+.plastic-card .card-content__right .card-item__dateItem {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Input-Form */
+.card-input__parent {
+  position: relative;
+  bottom: 120px;
+  width: 570px;
+  height: 560px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card-form__inner {
+  display: block;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.card-form__inner .card-input input.width {
+  width: 500px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  outline: none;
+  transition: 0.7s;
+}
+.card-form__inner .card-input label.pos-right {
+  display: flex;
+  margin: 0 0 5px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a3b5d;
+}
+
+.card-form__inner .card-input input:focus {
+  border: 1px solid blue;
+}
+.card-form__inner .card-input input.active:active,
+.card-form__inner .card-input input.active:focus .cardNumber-focus {
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+.card-form__inner .card-input input[type] {
+  padding: 0 0 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a3b5d;
+}
+
+.card-input__parent .card-form__row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-input__parent .card-form__col input.right-input {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.7s;
+}
+.card-input__parent .card-form__col label.label-left {
+  position: absolute;
+  left: 36px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a3b5d;
+}
+.card-input__parent .card-form__col label.labelCvv {
+  position: absolute;
+  right: 145px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #1a3b5d;
+}
+.card-input__parent .card-form__col input.right-input:focus {
+  border: 1px solid blue;
+}
+.card-input__parent .card-form__col input.right-input:hover {
+  border: 1px solid blue;
+}
+.card-input__parent .card-form__row select#cardMonth {
+  padding: 0 5px 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a3b5d;
+  border: 1px solid #ccc;
+  transition: 0.7s;
+}
+
+.card-input__parent .card-form__row select#cardYear {
+  padding: 0 5px 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a3b5d;
+  border: 1px solid #ccc;
+  transition: 0.7s;
+}
+
+.card-input__parent .card-form__row select#cardMonth:focus {
+  border: 1px solid blue;
+}
+.card-input__parent .card-form__row select#cardMonth:hover {
+  border: 1px solid blue;
+}
+
+.card-input__parent .card-form__row select#cardYear:focus {
+  border: 1px solid blue;
+}
+.card-input__parent .card-form__row select#cardYear:hover {
+  border: 1px solid blue;
+}
+
+.card-form__row select#cardYear {
+  margin-top: 20px;
+}
+
+.card-form__row select {
+  width: 150px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.card-input__parent button {
+  width: 510px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #2364d2;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid blue;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none;
 }
