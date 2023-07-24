@@ -26,13 +26,80 @@ body {
   margin: 0 auto;
   position: relative;
   top: 40px;
+  overflow: hidden;
+  z-index: 300;
+  /*backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  perspective: 1000px;
+  transform-style: preserve-3d;*/
+  transition: transform 0.5s ease-out;
+}
+
+.plastic-card .front {
   background: url("https://fikiwiki.com/uploads/posts/2022-02/1645052334_2-fikiwiki-com-p-kartinki-na-zadnii-fon-2.png")
     no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 15px;
-  z-index: 300;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease-out;
 }
+
+.plastic-card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.5s ease-out;
+}
+.plastic-card .card-back .back-black {
+  background: #000;
+  width: 100%;
+  height: 50px;
+  margin: 28px 0;
+}
+/*.plastic-card .card-back .backCVVtext {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  color: #222;
+  padding: 0 20px;
+}*/
+.plastic-card .card-back .boxCVV {
+  width: 95%;
+  height: 45px;
+  display: block;
+  padding: 12px 0 0 0;
+  text-align: right;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  color: #000;
+  margin-bottom: 25px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+}
+.plastic-card .card-back .back-img img {
+  width: 85px;
+  height: 45px;
+  position: absolute;
+  right: 10px;
+}
+
 .plastic-card .header-card img.img-document {
   width: 60px;
   height: 48px;
@@ -52,11 +119,10 @@ body {
 
 .plastic-card .cardNumber-focus {
   width: 380px;
-  height: 48px;
+  height: 50px;
   display: block;
-  text-align: center;
   vertical-align: middle;
-  margin: 0 25px;
+  margin: 0 30px;
   border-radius: 6px;
   margin-bottom: 38px;
   cursor: pointer;
@@ -66,6 +132,8 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.65);
 }
 .plastic-card .card-item {
+  padding: 10px 0 0 8px;
+  text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
   color: #333;
@@ -121,6 +189,12 @@ body {
   color: #ccc;
 }
 .plastic-card .card-content__right .card-item__dateItem {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.plastic-card .card-content__right .dateItem-parent .dateJs {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
