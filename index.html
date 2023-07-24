@@ -13,8 +13,7 @@
 <body>
    <div class="container">
       <div class="plastic-card">
-
-         <div class="front">
+         <div id="front">
             <div class="header-card">
                <img class="img-document"
                   src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
@@ -26,7 +25,7 @@
             </div>
 
             <div class="cardNumber-focus">
-               <label for="cardNumber" class="card-item" keyup()>#### #### #### ####
+               <label for="cardNumber" class="card-item">#### #### #### ####
                </label>
             </div>
 
@@ -35,10 +34,8 @@
                   <p class="card-item__holder">Card Holder</p>
                   <span class="card-item__name">Full Name</span>
                </label>
-
                <label for="cardMonth" class="card-content__right">
                   <p class="card-item__dateTitle">Expires</p>
-
                   <div class="dateItem-parent">
                      <span class="card-item__dateItem">MM/</span>
                      <span class="dateJs">YY</span>
@@ -48,9 +45,9 @@
          </div>
 
 
-         <div class="card-back">
+         <div id="card-back">
                <div class="back-black"></div>
-               <span class="backCVVtext">CVV</span>
+               <span class="backCVV-text">CVV</span>
                <div class="boxCVV"></div>
                <div class="back-img">
                   <img class="back-image"
@@ -69,8 +66,7 @@
                <label class="pos-right" for="cardNumber">
                   Card Number
                </label>
-               <input class="card-input__input width active" type="number" id="cardNumber" data-ref="cardNumber"
-                  autocomplete="off" maxlength="16">
+               <input class="card-input__input width active" type="tel" id="cardNumber" maxlength="19">
             </div>
 
 
@@ -129,7 +125,7 @@
 
          </div>
 
-         <button class="btn bottom-center">Submit</button>
+         <button type="submit" class="btn bottom-center">Submit</button>
       </div>
 
    </div>

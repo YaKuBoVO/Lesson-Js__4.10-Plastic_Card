@@ -25,59 +25,58 @@ body {
   height: 270px;
   margin: 0 auto;
   position: relative;
-  top: 40px;
+  top: 45px;
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1800;
   z-index: 300;
-  /*backface-visibility: hidden;
-  transform: perspective(1000px) rotateY(0deg);
-  perspective: 1000px;
-  transform-style: preserve-3d;*/
-  transition: transform 0.5s ease-out;
 }
 
-.plastic-card .front {
+.plastic-card #front {
   background: url("https://fikiwiki.com/uploads/posts/2022-02/1645052334_2-fikiwiki-com-p-kartinki-na-zadnii-fon-2.png")
     no-repeat;
   background-size: cover;
+  border: none;
+  border-radius: 15px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
-  border-radius: 15px;
   backface-visibility: hidden;
   transform: perspective(1000px) rotateY(0deg);
   transition: transform 0.5s ease-out;
 }
 
-.plastic-card .card-back {
+.plastic-card #card-back {
   position: absolute;
+  background: url("https://fikiwiki.com/uploads/posts/2022-02/1645052334_2-fikiwiki-com-p-kartinki-na-zadnii-fon-2.png")
+    no-repeat;
+  background-size: cover;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ccc;
   border-radius: 15px;
   backface-visibility: hidden;
   transform: perspective(1000px) rotateY(180deg);
   transition: transform 0.5s ease-out;
 }
-.plastic-card .card-back .back-black {
+.plastic-card #card-back .back-black {
   background: #000;
   width: 100%;
   height: 50px;
-  margin: 28px 0;
+  margin: 26px 0;
 }
-/*.plastic-card .card-back .backCVVtext {
+.plastic-card #card-back .backCVV-text {
   display: block;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   text-align: right;
-  color: #222;
-  padding: 0 20px;
-}*/
-.plastic-card .card-back .boxCVV {
+  color: #fff;
+  padding: 0 22px;
+}
+.plastic-card #card-back .boxCVV {
   width: 95%;
   height: 45px;
   display: block;
@@ -93,7 +92,7 @@ body {
   border: none;
   border-radius: 8px;
 }
-.plastic-card .card-back .back-img img {
+.plastic-card #card-back .back-img img {
   width: 85px;
   height: 45px;
   position: absolute;

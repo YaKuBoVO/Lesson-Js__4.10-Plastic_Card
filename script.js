@@ -2,13 +2,11 @@
 const cardNumber = document.querySelector('.cardNumber-focus');
 const cardLeft =  document.querySelector('.card-content__left');
 const cardRight = document.querySelector('.card-content__right');
-
 const cardNumberInput = document.querySelector('#cardNumber');
 const cardNameInput = document.querySelector('#cardName');
 const cardMonth = document.querySelector('#cardMonth');
 const cardItemLabel = document.querySelector('.card-item');
 const cardFullName = document.querySelector('.card-item__name');
-
 const selectMonth = document.querySelector(".month-select");
 const plasticDate = document.querySelector('.card-item__dateItem');
 const selectYear = document.querySelector('.select-year');
@@ -52,30 +50,27 @@ cardRight.addEventListener('click', (e) => {
 });
 
 
-/*document.querySelector('.cardCvv').onmouseleave = () => {
-   document.querySelector('.plastic-card').style.transform = "perspective(1000px) rotateY(-180deg)";
-   document.querySelector(".back").style.transform = "perspective(1000px) rotateY(0deg)";
+document.querySelector('#cardCvv').onmouseenter = () => {
+   document.querySelector('#front').style.transform = "perspective(1500px) rotateY(-180deg)";
+   document.querySelector("#card-back").style.transform = "perspective(1500px) rotateY(0deg)";
 };
 
-document.querySelector(".cardCvv").onmouseleave = () => {
-    document.querySelector('.plastic-card').style.transform = "perspective(1000px) rotateY(0deg)";
-   document.querySelector(".back").style.transform = "perspective(1000px) rotateY(180deg)";
-};*/
+document.querySelector("#cardCvv").onmouseleave = () => {
+    document.querySelector('#front').style.transform = "perspective(1500px) rotateY(0deg)";
+   document.querySelector("#card-back").style.transform = "perspective(1500px) rotateY(180deg)";
+};
 
-//document.querySelector("#cardCvv").oninput = () => {
-//   document.querySelector(".boxCVV").innerHTML = 
-//   document.querySelector("#cardCvv").value;
-//}
-
-
+document.querySelector("#cardCvv").oninput = () => {
+   document.querySelector(".boxCVV").innerHTML = 
+   document.querySelector("#cardCvv").value;
+}
 
 
-
-/*cardItemLabel.addEventListener("keyup", (e) => {
+cardNumberInput.addEventListener("keyup", (e) => {
    if(!e.target.value) {
-      cardItemLabel.innerHTML = '****  ****  ****  ****';
+      cardItemLabel.innerText = '#### #### #### ####';
    }  else {
-      const valuesOfInput = e.target.value.replaceAll("", "");
+      const valuesOfInput = e.target.value.replaceAll(" ", "");
 
       if (e.target.value.length > 14) {
          e.target.value = valuesOfInput.replace(
@@ -108,7 +103,7 @@ document.querySelector(".cardCvv").onmouseleave = () => {
          cardItemLabel.innerHTML = valuesOfInput;
       }
    }
-});*/
+});
 
 
 
